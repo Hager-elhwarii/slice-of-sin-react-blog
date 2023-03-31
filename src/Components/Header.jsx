@@ -105,8 +105,6 @@ export default function Header() {
                     className="btn btn-ghost btn-circle avatar"
                   >
                     <div className="w-10 rounded-full">
-                      {/* <img src="src/assets/images/profile_pic.png" /> */}
-
                       <img
                         src={
                           user.userBody.avatar.url === ""
