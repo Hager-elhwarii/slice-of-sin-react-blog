@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "email": "hager@gmail.com",
+      "password": "$2a$10$6gzsf9Nz2uYRGXD/bi8ujuEVp.Ttf8dkFBK/hnQPefzS1TbWmcZ0O",
+      "name": "Hager",
+      "confirm_password": "bestPassw0rd",
+      "id": 1
+    },
+    {
+      "email": "Osama@gmail.com",
+      "password": "$2a$10$IWp.cRCvd6yXTGOBSdgbUeqy98zF8h6pXP.VCTq9bwOdgCegENaQy",
+      "name": "Osama",
+      "confirm_password": "bestPassw0rd",
+      "id": 2
+    },
+    {
+      "email": "leen@gmail.com",
+      "password": "$2a$10$zY8/PtlSWyoJKM49vw1.N.j/tJ6KXeoV12V.6RGcznPxsqR.07oSe",
+      "name": "leen",
+      "confirm_password": "123456$$$",
+      "id": 3
+    },
+    {
+      "email": "marien@gmail.com",
+      "password": "$2a$10$dXvuXgXtVr43sB.56.4NZeAjq2hJPbzrDeGZ3pEUmVxVXa9zVVKRK",
+      "name": "marien",
+      "confirm_password": "$$$llll",
+      "id": 4
+    }
+  ]
+}

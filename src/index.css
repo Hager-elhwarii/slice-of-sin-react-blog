@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Chakra+Petch&family=Dancing+Script:wght@700&family=Sono:wght@600&family=Tilt+Neon&family=Tilt+Prism&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Chakra+Petch&family=Dancing+Script:wght@700&family=Julius+Sans+One&family=Sono:wght@600&family=Tilt+Neon&family=Tilt+Prism&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manjari&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  padding-top: 25px;  
+ } */
+:root {
+  background-color: #fff;
+}
+.Logo,
+.homeTitle {
+  font-family: "Dancing Script", cursive !important;
+}
+
+.logInForm {
+  width: 28rem !important;
+  margin-top: -4rem;
+}
+.createBtn {
+  margin-top: -8rem;
+}
+.homeTitle {
+  font-family: "Julius Sans One", sans-serif;
+  color: #a78bfa;
+}
+.title {
+  font-family: "Manjari", sans-serif;
+}
+.card {
+  width: 28rem;
+}
+
+.navEnd {
+  margin-top: 3.64rem;
+}
+
+.demo-1 {
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.demo-1 h3 {
+  font-size: 5em;
+  color: #e91e63;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  /* Starting position */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  /* Apply animation to this element */
+  -moz-animation: demo-1 15s linear infinite;
+  -webkit-animation: demo-1 15s linear infinite;
+  animation: demo-1 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes demo-1 {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes demo-1 {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+@keyframes demo-1 {
+  0% {
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  #nav-content {
+    display: none;
+  }
+
+  #nav-toggle {
+    display: block;
+  }
+}
