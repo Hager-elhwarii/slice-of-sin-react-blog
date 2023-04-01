@@ -73,7 +73,7 @@ export default function PostForm(props) {
       formData.append("image", JSON.stringify(image));
 
       const res = await axios.patch(
-        `http://localhost:3000/v1/post/${id}`,
+        `https://slice-of-sin-backend.onrender.com/v1/post/${id}`,
         formData,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -88,10 +88,14 @@ export default function PostForm(props) {
       //console.log("creating post");
       //console.log({ user });
       formData.append("user", user.userBody._id);
-
-      const res = await axios.post("http://localhost:3000/v1/post", formData, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      console.log({ title: data.title });
+      const res = await axios.post(
+        "https://slice-of-sin-backend.onrender.com/v1/post",
+        formData,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       console.log({ res });
       if (res.status === 200) {
         console.log("in toast");

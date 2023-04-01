@@ -20,7 +20,9 @@ export default function FullPostCard() {
   }, []);
 
   const fetchPost = async () => {
-    let { data: res } = await axios.get(`http://localhost:3000/v1/post/${id}`);
+    let { data: res } = await axios.get(
+      `https://slice-of-sin-backend.onrender.com/v1/post/${id}`
+    );
     //console.log({ res: res.data.image.url });
     setPost(res.data);
   };

@@ -5,7 +5,7 @@ export default function DeleteIcon({ id, handleDeleteRender }) {
   console.log({ id });
   const handleDelete = async () => {
     const { data } = await axios.delete(
-      `http://localhost:3000/v1/post`,
+      `https://slice-of-sin-backend.onrender.com/v1/post`,
       { data: { id } }
       // {
       //   headers: { Authorization: `Bearer ${token}` },
@@ -43,12 +43,19 @@ export default function DeleteIcon({ id, handleDeleteRender }) {
           </p>
           <div className="flex justify-end gap-2">
             <div className="modal-action">
-              <a href="#" className="btn btn-error text-white capitalize" onClick={handleDelete}>
+              <a
+                href="#"
+                className="btn btn-error text-white capitalize"
+                onClick={handleDelete}
+              >
                 Yes
               </a>
             </div>
             <div className="modal-action">
-              <a href="####" className="capitalize text-gray-800 btn btn-outline hover:bg-black hover:text-white ease-in duration-300">
+              <a
+                href="####"
+                className="capitalize text-gray-800 btn btn-outline hover:bg-black hover:text-white ease-in duration-300"
+              >
                 Cancel
               </a>
             </div>

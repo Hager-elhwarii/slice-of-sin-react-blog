@@ -14,7 +14,7 @@ import axios from "axios";
 export default function Home() {
   const [posts, setPosts] = useState([]);
   const { user } = useContext(UserContext);
-  const API = "http://localhost:3000/v1/post";
+  const API = "https://slice-of-sin-backend.onrender.com/v1/post";
 
   console.log({ posts });
   const fetchPosts = async () => {

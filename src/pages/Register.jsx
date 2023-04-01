@@ -36,7 +36,7 @@ export default function Register() {
     // //console.log({ body });
     try {
       const data = await axios.post(
-        "http://localhost:3000/v1/auth/sign-up",
+        "https://slice-of-sin-backend.onrender.com/v1/auth/sign-up",
         body,
         {
           headers: {

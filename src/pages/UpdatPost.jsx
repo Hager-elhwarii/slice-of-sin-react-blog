@@ -13,7 +13,7 @@ export default function UpdatePost() {
   const { id } = useParams();
   const fetchPost = async () => {
     const { data: res } = await axios.get(
-      `http://localhost:3000/v1/post/${id}`
+      `https://slice-of-sin-backend.onrender.com/v1/post/${id}`
     );
     setPost(res.data);
     //console.log({ post });

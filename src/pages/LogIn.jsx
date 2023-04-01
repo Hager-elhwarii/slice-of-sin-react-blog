@@ -39,14 +39,13 @@ export default function LogIn() {
     // //console.log({ body: JSON.stringify(body) });
     try {
       const { data: res } = await axios.post(
-        "http://localhost:3000/v1/auth/sign-in",
+        "https://slice-of-sin-backend.onrender.com/v1/auth/sign-in",
         body
       );
       console.log({ res });
       if (res.success === true) {
         toast.success("Your are logged successfully");
         // className: 'toast-message'
-
       }
       //console.log({ user: res.data });
       setUser(res.data);
