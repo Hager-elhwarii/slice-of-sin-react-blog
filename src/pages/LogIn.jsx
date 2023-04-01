@@ -48,13 +48,14 @@ export default function LogIn() {
         // className: 'toast-message'
       }
       //console.log({ user: res.data });
+      // console.log({ res });
       setUser(res.data);
       navigate("/");
     } catch (err) {
       //handle different types of errors -> wrong password or unregisterd
       //console.log("caught refe");
       //console.log({ err });
-      if (err.response.status === 404) {
+      if (err.response.status === 404 || err.response.status === 401) {
         // navigate("/register");
         toast.error("Invalid email or password!");
         // location.reload();

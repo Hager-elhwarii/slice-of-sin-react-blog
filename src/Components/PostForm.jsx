@@ -22,11 +22,11 @@ function isValidFileType(fileName, fileType) {
   );
 }
 
-const schema = yup.object({
+const schema = yup.object().shape({
   title: yup.string().required("Please fill out this field.").min(4),
   description: yup.string().required("Please fill out this field.").min(4),
   recipe: yup.string().required("Please fill out this field."),
-  file: yup.mixed().required("Please choose an image."),
+  file: yup.mixed().required().test("length","Please choose an image.",(value)=>value.length===1),
   // .test("is-valid-type", "Not a valid image type", (value) =>
   //   isValidFileType(value && value.name.toLowerCase(), "image")
   // )

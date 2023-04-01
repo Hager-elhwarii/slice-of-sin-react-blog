@@ -16,6 +16,7 @@ import ForgetPasswordForm from "./pages/ForgetPasswordForm";
 import UserProfile from "./pages/UserProfile";
 import UpdatePost from "./pages/UpdatPost";
 import ScrollToTop from "./Components/ScrollToTop";
+import Cta from "./Components/Cta";
 
 function App() {
   const { user, setUser } = useUser();
@@ -38,6 +39,7 @@ function App() {
         <Route path="/login" element={<LogIn />} />
         <Route path="/register" element={<Register />} />
         <Route element={<About />} path="/about" />
+        <Route element={<Cta />} path="/cta" />
         <Route element={<CreatePost />} path="/recipe/create" />
         <Route element={<FullPostCard />} path="/recipe/:id" />
         <Route element={<ForgetPasswordForm />} path="/ForgetPasswordForm" />

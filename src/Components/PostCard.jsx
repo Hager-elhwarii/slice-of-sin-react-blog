@@ -45,18 +45,18 @@ export default function PostCard(props) {
 
   return (
     <>
-      <div className="card min-w-100 shadow-xl mb-10 z-1 flex  justify-start ">
-        <figure>
+      <div className="min-w-100 shadow-xl mb-3 z-1 ">
+        <figure className="w-full h-80 overflow-hidden rounded-t-3xl ">
           <Link to={`recipe/${id}`} id={id} className="text-center">
             <img
               src={background}
               alt="Shoes"
-              className="scale-100 hover:scale-110 cursor-pointer ease-in duration-300 "
+              className="scale-100 hover:scale-110 cursor-pointer ease-in duration-300 bgCard h-full w-full object-cover"
             />
           </Link>
         </figure>
-        <div className="card-body">
-          <div className="flex">
+        <div className="py-4 px-4">
+          <div className="flex my-3">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img src={authorThumbnail} />
@@ -76,7 +76,7 @@ export default function PostCard(props) {
           <p className="text-gray-500">{description}</p>
           <div className="flex justify-between align-middle">
             <Link to={`recipe/${id}`} id={id} className="text-center">
-              <button className="flex justify-start text-center  hover:text-white  text-gray-600 dark:text-gray-600  cursor-pointer mt-2 order-solid border-2 border-gray-400 w-40 rounded-sm py-2 hover:bg-black hover:border-black ease-in duration-300 ">
+              <button className="mt-6 flex justify-start text-center  hover:text-white  text-gray-600 dark:text-gray-600  cursor-pointer order-solid border-2 border-gray-400 w-40 rounded-sm py-2 hover:bg-black hover:border-black ease-in duration-300 ">
                 <div className="flex m-auto">
                   <div>Read More</div>
 

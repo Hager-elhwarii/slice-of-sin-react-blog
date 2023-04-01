@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
@@ -7,17 +8,21 @@ export default function Footer() {
             <span className="inline md:block">Join Us</span>
             <span className=" mt-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-emerald-400 to-green-500 md:inline-block">
               {" "}
-              We are
+              Baking Made
+
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-cyon-400 to-purple-300">
                 {" "}
-                Hiring
+                Easy
               </span>{" "}
             </span>
           </h1>
           <div className="mx-auto rounded-lg font-black mt-5 text-zinc-400 md:mt-12 md:max-w-lg text-center lg:text-lg">
+            <Link to="/register">
             <button className="bg-tkb border text-sm text-white py-3 px-7 rounded-full">
-              Join Sahilnetic
+              Sign Up
             </button>
+            </Link>
+           
           </div>
         </div>
       </section>
@@ -28,7 +33,29 @@ export default function Footer() {
           <div className="sm:flex sm:items-center sm:justify-between">
             <div className="flex justify-center text-teal-300 sm:justify-start">
               <p className="mt-4 text-sm text-center text-gray-400 lg:text-left lg:mt-0">
-                T&C &nbsp; Career &nbsp; Privacy & Policy &nbsp; Developers
+               <u className="flex no-underline	list-none">
+               <li className="ml-10 ">
+              <Link to="/" className="text-gray-600">
+                Home
+              </Link>
+            </li>
+            <li className="ml-10 ">
+              <Link to="/about" className="text-gray-600">
+                About Us
+              </Link>
+            </li>
+            <li className="ml-10 ">
+              <Link to="/Cta" className="text-gray-600">
+                CTA
+              </Link>
+            </li>
+            <li className="ml-10 ">
+              <Link to="/login" className="text-gray-600">
+                Log in
+              </Link>
+            </li>
+          
+               </u>
               </p>
             </div>
             {/* <img className="rounded-full" src="https://sahilnetic.xyz/evilcat.png" width="40" height="40" /> */}

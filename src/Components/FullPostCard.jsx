@@ -147,7 +147,7 @@ export default function FullPostCard() {
       </div>
       <div className="relative w-full h-64 lg:h-auto lg:w-1/2 rounded-t lg:rounded-t-none lg:rounded-r inline-block">
         <img
-          className="w-full h-full absolute inset-0 object-cover rounded-t lg:rounded-r lg:rounded-t-none"
+          className="w-full h-full absolute inset-0 object-cover rounded-t lg:rounded-r lg:rounded-t-none  cursor-pointer "
           src={post.image.url}
           alt="banner"
         />

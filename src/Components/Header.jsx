@@ -5,7 +5,7 @@ import UserContext from "../contexts/userContext";
 export default function Header() {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
-  console.log({ user });
+  // console.log({ user });
   const handleLogout = () => {
     // const { setuser } = useUser();
     localStorage.removeItem("user");
@@ -21,7 +21,7 @@ export default function Header() {
         <div className=" navbar-start ">
           <ul
             tabIndex={0}
-            className="mt-3 p-2 flex  bg-white rounded-box w-52 lg:flex-grow"
+            className="mt-3 p-2 bg-white rounded-box w-52 lg:flex-grow hidden lg:flex"
           >
             <li className="ml-10 ">
               <Link to="/" className="text-gray-600">
@@ -34,13 +34,13 @@ export default function Header() {
               </Link>
             </li>
             <li className="ml-10 ">
-              <a>Plans</a>
+              <Link to="/cta" className="text-gray-600">
+                CTA
+              </Link>
             </li>
-            <li className="ml-10 ">
-              <a>Careers</a>
-            </li>
+          
           </ul>
-          {/* <div className="dropdown">
+          <div className="dropdown block lg:hidden ">
             <div id="nav-toggle" className="block lg-hidden">
               <label tabIndex={0} className="btn btn-ghost btn-circle">
                 <svg
@@ -80,12 +80,10 @@ export default function Header() {
                 <li className="ml-10 block mt-4 lg:inline-block lg:mt-0 ">
                   <a>Plans</a>
                 </li>
-                <li className="ml-10 block mt-4 lg:inline-block lg:mt-0 ">
-                  <a>Careers</a>
-                </li>
+               
               </ul>
             </div>
-          </div> */}
+          </div>
         </div>
         <div className="navbar-center">
           <a className=" normal-case text-5xl Logo text-gray-500">
@@ -96,18 +94,18 @@ export default function Header() {
           <div className="dropdown dropdown-end ">
             {user ? (
               <div className="flex items-center">
-                <div className="mr-2 username text-center">
+                <div className="mr-2 username text-center hidden md:block">
                   <p>Hello {user?.userBody?.username}</p>
                 </div>
-                <div className="menu">
+                <div className="menu ">
                   <label
                     tabIndex={0}
-                    className="btn btn-ghost btn-circle avatar"
+                    className="btn btn-ghost btn-circle avatar "
                   >
                     <div className="w-10 rounded-full">
                       <img
                         src={
-                          user.userBody.avatar.url === ""
+                          user?.userBody?.avatar?.url === ""
                             ? "https://digilander.libero.it/Ictszu/rev4.0/avatar.jpg"
                             : user?.userBody?.avatar?.url
                         }
@@ -124,10 +122,7 @@ export default function Header() {
                       <button onClick={handleLogout}>Logout</button>
                       {/* <a>Logout</a> */}
                     </li>
-                    <li>
-                      <button>Profile</button>
-                      {/* <a>Logout</a> */}
-                    </li>
+                   
                     {/* <li>
                       <Link to="/login" className="active:bg-teal-400">
                         {" "}
