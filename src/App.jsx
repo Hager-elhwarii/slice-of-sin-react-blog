@@ -2,7 +2,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
-import useUser from "./CustomHooks/useUser";
+import useUser from "./customHooks/useUser";
 import UserContext from "./Contexts/userContext";
 import Home from "./pages/Home.jsx";
 import Register from "./pages/Register.jsx";
