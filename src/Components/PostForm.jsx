@@ -1,15 +1,15 @@
 import { useContext } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate, useParams } from "react-router-dom";
 
-import UserContext from "../contexts/userContext";
+import UserContext from "../Contexts/userContext";
 
-const MAX_FILE_SIZE = 10485760; //10MB
+const MAX_FILE_SIZE = 10485760;
 
 const validFileExtensions = {
   image: ["jpg", "gif", "png", "jpeg", "svg", "webp"],
@@ -26,24 +26,17 @@ const schema = yup.object().shape({
   title: yup.string().required("Please fill out this field.").min(4),
   description: yup.string().required("Please fill out this field.").min(4),
   recipe: yup.string().required("Please fill out this field."),
-  file: yup.mixed().required().test("length","Please choose an image.",(value)=>value.length===1),
-  // .test("is-valid-type", "Not a valid image type", (value) =>
-  //   isValidFileType(value && value.name.toLowerCase(), "image")
-  // )
-  // .test(
-  //   "is-valid-size",
-  //   "Max allowed size is 100KB",
-  //   (value) => value && value.size <= MAX_FILE_SIZE
-  // ),
+  file: yup
+    .mixed()
+    .required()
+    .test("length", "Please choose an image.", (value) => value.length === 1),
 });
 export default function PostForm(props) {
   const { user } = useContext(UserContext);
-  // //console.log({ context });
   const notify = () => toast.success("Post is Created Scuccessfully");
   const { access_token: token } = user;
   const navigate = useNavigate();
   const { id } = useParams();
-  //console.log({ props });
 
   const { title, description, recipe, image, pageTitle } = props;
 
@@ -57,19 +50,14 @@ export default function PostForm(props) {
   });
 
   const onSubmit = async (data) => {
-    // //console.log({ file: data.file[0] });
     const formData = new FormData();
     //console.log({ data });
     formData.append("file", data.file[0]);
     formData.append("title", data.title);
     formData.append("description", data.description);
     formData.append("recipe", data.recipe);
-    // formData.append("author", JSON.stringify({authorId:user._id,}));
-
-    //console.log({ formData });
 
     if (title && description && recipe) {
-      //console.log("updating post");
       formData.append("image", JSON.stringify(image));
 
       const res = await axios.patch(
@@ -79,14 +67,10 @@ export default function PostForm(props) {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      // console.log({ res });
       if (res.status === 200) {
-        // console.log("in here");
         toast.success("Post is updated Scuccessfully");
       }
     } else {
-      //console.log("creating post");
-      //console.log({ user });
       formData.append("user", user.userBody._id);
       console.log({ title: data.title });
       const res = await axios.post(
@@ -119,15 +103,11 @@ export default function PostForm(props) {
                     Post Title
                   </label>
                   <div className="mt-2 flex flex-wrap rounded-md shadow-sm">
-                    {/* <input type="text" name="PostTitle" id="PostTitle" className="block w-full flex-1 rounded-none rounded-r-md border-0 py-1.5 text-gray-900 ring-1 
-                  ring-inset ring-gray-300
-                   placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="  type your title here"/> */}
                     <input
                       {...register("title")}
                       type="text"
                       placeholder="  Type your title here..."
                       className="input input-bordered w-full bg-white text-sm"
-                      //   value={title ?? ""}
                     />
                     <p className="text-red-500 text-xs mt-2 italic">
                       {errors.title?.message}
@@ -140,10 +120,6 @@ export default function PostForm(props) {
                   Description
                 </label>
                 <div className="mt-2">
-                  {/* <textarea id="about" name="about" rows="3" className="mt-1 block w-full rounded-md border-0 text-gray-900 
-                
-                shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset
-                 focus:ring-indigo-600 sm:py-1.5 sm:text-sm sm:leading-6" bg-white	 placeholder="  type your post description here"></textarea> */}
                   <textarea
                     {...register("description")}
                     rows="3"

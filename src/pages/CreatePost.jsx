@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import PostForm from "../Components/PostForm";
-import UserContext from "../contexts/userContext";
+import UserContext from "../Contexts/userContext";
 
 export default function CreatePost() {
   return (

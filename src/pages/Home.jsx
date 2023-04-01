@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
 
 import CreatePostBtn from "../Components/CreatePostBtn";
 import PostCard from "../Components/PostCard";
 import DownArrow from "../Components/DownArrow";
-// import Stats from "../Components/Stats";
-import UserContext from "../contexts/userContext";
+import UserContext from "../Contexts/userContext";
 import GetStarted from "../Components/GetStarted";
 import ShopNow from "../Components/ShopNow";
 import Loader from "../Components/Loader";
@@ -19,9 +17,7 @@ export default function Home() {
   console.log({ posts });
   const fetchPosts = async () => {
     const { data: res } = await axios.get(API);
-    //console.log({ posts: res.data });
     setPosts(res.data);
-    //console.log({ posts: res.data });
   };
 
   useEffect(() => {
@@ -29,7 +25,6 @@ export default function Home() {
   }, []);
 
   const handleDeleteRender = (id) => {
-    //console.log("in handle delete render");
     setPosts(posts.filter((post) => post._id !== id));
   };
 
@@ -39,7 +34,6 @@ export default function Home() {
       <div
         className="hero min-h-min relative  "
         style={{
-          // backgroundImage: `url("https://res.cloudinary.com/mps/image/upload/v1489664791/gdmda85ywclxr4yhngtj.jpg")`,
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),url("https://res.cloudinary.com/mps/image/upload/v1489664791/gdmda85ywclxr4yhngtj.jpg")`,
         }}
       >
@@ -51,11 +45,6 @@ export default function Home() {
             <h1 className="mb-20  font-bold text-8xl text-transparent">
               Our Recipes
             </h1>
-
-            {/* <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              .
-            </p> */}
           </div>
         </div>
       </div>
@@ -71,11 +60,7 @@ export default function Home() {
           <DownArrow />
         </div>
       </div>
-      <div
-        className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto px-6 max-w-[1500px] gap-6 "
-        // className="container mx-auto flex flex-wrap justify-evenly gap-4"
-        // style={{ marginLeft: `2rem` }}
-      >
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto px-6 max-w-[1500px] gap-6 ">
         {posts.map((post, index) => {
           let newPost = false;
           if (index === 0) {
@@ -97,10 +82,8 @@ export default function Home() {
           );
         })}
       </div>
-
       <GetStarted />
       <ShopNow />
-      {/* <Stats/> */}
     </>
   );
 }

@@ -1,9 +1,9 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
-import useUser from "./customHooks/useUser";
-import UserContext from "./contexts/userContext";
+import useUser from "./CustomHooks/useUser";
+import UserContext from "./Contexts/userContext";
 import Home from "./pages/Home.jsx";
 import Register from "./pages/Register.jsx";
 import LogIn from "./pages/LogIn.jsx";
@@ -12,8 +12,6 @@ import Header from "./Components/Header.jsx";
 import Footer from "./Components/Footer";
 import CreatePost from "./pages/CreatePost";
 import FullPostCard from "./Components/FullPostCard";
-import ForgetPasswordForm from "./pages/ForgetPasswordForm";
-import UserProfile from "./pages/UserProfile";
 import UpdatePost from "./pages/UpdatPost";
 import ScrollToTop from "./Components/ScrollToTop";
 import Cta from "./Components/Cta";
@@ -21,12 +19,7 @@ import Cta from "./Components/Cta";
 function App() {
   const { user, setUser } = useUser();
 
-  //console.log({ user });
-
-  // if (!user) {
-  //   //console.log("in no user");
-  //   return <LogIn setUser={setUser}></LogIn>;
-  // }
+ 
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
@@ -42,8 +35,6 @@ function App() {
         <Route element={<Cta />} path="/cta" />
         <Route element={<CreatePost />} path="/recipe/create" />
         <Route element={<FullPostCard />} path="/recipe/:id" />
-        <Route element={<ForgetPasswordForm />} path="/ForgetPasswordForm" />
-        <Route element={<UserProfile />} path="/userProfile" />
         <Route element={<UpdatePost />} path="/recipe/edit/:id" />
         <Route element={<Home />} path="/" />
       </Routes>

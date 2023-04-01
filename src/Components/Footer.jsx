@@ -58,7 +58,6 @@ export default function Footer() {
                </u>
               </p>
             </div>
-            {/* <img className="rounded-full" src="https://sahilnetic.xyz/evilcat.png" width="40" height="40" /> */}
           </div>
         </div>
       </footer>

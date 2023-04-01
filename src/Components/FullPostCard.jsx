@@ -1,33 +1,23 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import EditIcon from "./EditIcon";
-import DeleteIcon from "./DeleteIcon";
+
 import Loader from "./Loader";
 export default function FullPostCard() {
   const [post, setPost] = useState(null);
 
-  // const location = useLocation();
-  // const id = location.pathname.split("/")[2];
-
   const { id } = useParams();
   console.log({ post });
   useEffect(() => {
-    //console.log("in");
     fetchPost();
-    //console.log({ id });
-    //console.log({ post });
   }, []);
 
   const fetchPost = async () => {
     let { data: res } = await axios.get(
       `https://slice-of-sin-backend.onrender.com/v1/post/${id}`
     );
-    //console.log({ res: res.data.image.url });
     setPost(res.data);
   };
-
-  //  return <Loader/>
 
   if (!post) return <Loader />;
 
@@ -50,30 +40,15 @@ export default function FullPostCard() {
               </div>
             </div>
           </div>
-          {/* <a tabIndex="0" className="focus:outline-none focus:underline focus:text-gray-500 hover:text-gray-500 cursor-pointer text-gray-800 dark:text-gray-100" ><h2 className=" mt-4 mb-2 tracking-normal text-xl lg:text-2xl font-bold">CES - The Global Stage for Innovation</h2></a>  */}
           <h2 className="card-title text-5xl font-bold mb-6 text-gray-600 mt-6">
             {post.title}
           </h2>
 
           <p className="text-gray-500">
-            {/* easy fluffy vanilla pancake recipe made from everyday ingredients
-            but with delicious pops of fresh strawberry in every bite!Just like
-            I said,Ingredients you will need you only need pantry basics (flour,
-            baking powder, egg, milk, vanilla essence, a little sugar, and salt)
-            to make these strawberry pancakes, oh, and of course you are also
-            going to need strawberries! */}
             {post.description}
             <br />
             <br />
-            {/* Step by step instructions : Whisk together the dry ingredients. Melt
-            the butter, (I do this in a microwave-proof jug, that's large enough
-            to hold all the wet ingredients, which means fewer dishes!) Whisk
-            together the wet ingredients (melted butter, egg, vanilla, milk).
-            Add the wet ingredients to the dry ingredients, whisk them until
-            well combined. . There may be a few lumps, don't worry about these.
-            Leave the batter to rest for 10 mins While the batter is resting,
-            dice the strawberries into 1cm cubes (make sure you remove the
-            leaves lol.) . Fold the diced strawberries into the pancake batter.. */}
+
             {post.recipe}
           </p>
 
@@ -126,23 +101,7 @@ export default function FullPostCard() {
           </div>
         </div>
         <div className="px-5 lg:px-5 md:px-10 py-3 lg:py-4 flex flex-row items-center justify-between border-t border-gray-300">
-          <div className="flex items-center">
-            {/* so the share and save icons are at the end */}
-          </div>
-          {/* <div className="flex items-center">
-            <button
-              aria-label="save"
-              className="focus:outline-none focus:text-sky-400 hover:text-sky-500  text-sky-600 dark:text-sky-400  cursor-pointer mr-4"
-            >
-              <EditIcon />
-            </button>
-            <button
-              aria-label="share"
-              className="text-red-700 dark:text-red-600  hover:text-red-500  focus:outline-none focus:text-red-500 cursor-pointer"
-            >
-              <DeleteIcon />
-            </button>
-          </div> */}
+          <div className="flex items-center"></div>
         </div>
       </div>
       <div className="relative w-full h-64 lg:h-auto lg:w-1/2 rounded-t lg:rounded-t-none lg:rounded-r inline-block">

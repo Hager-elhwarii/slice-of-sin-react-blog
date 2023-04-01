@@ -7,14 +7,9 @@ export default function DeleteIcon({ id, handleDeleteRender }) {
     const { data } = await axios.delete(
       `https://slice-of-sin-backend.onrender.com/v1/post`,
       { data: { id } }
-      // {
-      //   headers: { Authorization: `Bearer ${token}` },
-      // }
+    
     );
-    // //console.log({ data });
     handleDeleteRender(id);
-
-    // setPosts(previousValue.filter((_id) => _id !== id));
   };
   return (
     <>

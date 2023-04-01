@@ -1,15 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import UserContext from "../contexts/userContext";
+import UserContext from "../Contexts/userContext";
 
 export default function Header() {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
-  // console.log({ user });
   const handleLogout = () => {
-    // const { setuser } = useUser();
     localStorage.removeItem("user");
-    //console.log("loggged out");
     navigate("/");
     location.reload();
   };
@@ -21,9 +18,9 @@ export default function Header() {
         <div className=" navbar-start ">
           <ul
             tabIndex={0}
-            className=" p-2 bg-white rounded-box w-52 lg:flex-grow hidden lg:flex"
+            className="mt-3 p-2 bg-white rounded-box w-52 lg:flex-grow hidden lg:flex"
           >
-            <li className="ml-5">
+            <li className="ml-6">
               <Link to="/" className="text-gray-600">
                 Home
               </Link>
@@ -111,7 +108,6 @@ export default function Header() {
                         }
                       />
 
-                      {/* <img src="https://yt3.ggpht.com/a/AGF-l79E55UZW_ujepY_0FCabPGEzJyTB3W5la8taA=s900-c-k-c0xffffffff-no-rj-mo" /> */}
                     </div>
                   </label>
                   <ul

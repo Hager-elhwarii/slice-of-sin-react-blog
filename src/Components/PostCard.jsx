@@ -1,18 +1,14 @@
 import { Link } from "react-router-dom";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
-import UserContext from "../contexts/userContext";
+import UserContext from "../Contexts/userContext";
 import DeleteIcon from "./DeleteIcon";
 import EditIcon from "./EditIcon";
 import RightArrow from "./RightArrow";
 
 export default function PostCard(props) {
-  // const loggedUser = localStorage.getItem("user")
-  //   const userId = loggedUser._id
-  //  //console.log({userId});
   const { user } = useContext(UserContext);
-  //console.log({ user });
-
+console.log(useContext(UserContext));
   const {
     id,
     authorThumbnail,
@@ -76,7 +72,7 @@ export default function PostCard(props) {
           <p className="text-gray-500">{description}</p>
           <div className="flex justify-between align-middle">
             <Link to={`recipe/${id}`} id={id} className="text-center">
-              <button className="mb-3 mt-6 flex justify-start text-center  hover:text-white  text-gray-600 dark:text-gray-600  cursor-pointer order-solid border-2 border-gray-400 w-40 rounded-sm py-2 hover:bg-black hover:border-black ease-in duration-300 ">
+              <button className="mb-3 mt-6 flex justify-start text-center  hover:text-white  text-gray-500 dark:text-gray-500  cursor-pointer order-solid border-2 border-gray-400 w-40 rounded-sm py-2 hover:bg-black hover:border-black ease-in duration-300 ">
                 <div className="flex m-auto">
                   <div>Read More</div>
 

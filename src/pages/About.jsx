@@ -124,14 +124,5 @@ export default function About() {
       </div>
     </div>
 
-    //   <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://i3.photo.2gis.com/images/branch/67/9429411728482652_1c92.jpg")` }}>
-    //   <div className="hero-content text-center">
-    //     <div className="max-w-md">
-    //       <h1 className="text-8xl font-bold text-white">About Us</h1>
-    //       <p className="py-6 text-gray-300">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-    //       <button className="btn btn-primary">Get Started</button>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }

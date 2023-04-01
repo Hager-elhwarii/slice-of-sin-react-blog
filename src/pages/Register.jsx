@@ -1,10 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import * as yup from "yup";
-import LogIn from "./LogIn";
 
 const schema = yup.object({
   username: yup.string().required("Please fill out this field.").min(4),
@@ -33,7 +31,6 @@ export default function Register() {
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = async (body) => {
-    // //console.log({ body });
     try {
       const data = await axios.post(
         "https://slice-of-sin-backend.onrender.com/v1/auth/sign-up",
@@ -44,11 +41,8 @@ export default function Register() {
           },
         }
       );
-      //console.log({ data });
       navigate("/login");
-    } catch (err) {
-      //console.log(err);
-    }
+    } catch (err) {}
   };
 
   return (

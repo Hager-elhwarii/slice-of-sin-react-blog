@@ -7,16 +7,12 @@ import axios from "axios";
 export default function UpdatePost() {
   const [post, setPost] = useState();
 
-  // const location = useLocation();
-  // const id = location.pathname.split("/")[3];
-
   const { id } = useParams();
   const fetchPost = async () => {
     const { data: res } = await axios.get(
       `https://slice-of-sin-backend.onrender.com/v1/post/${id}`
     );
     setPost(res.data);
-    //console.log({ post });
   };
 
   useEffect(() => {

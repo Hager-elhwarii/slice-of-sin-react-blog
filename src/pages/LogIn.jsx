@@ -5,8 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useContext } from "react";
-import Register from "./Register";
-import UserContext from "../contexts/userContext";
+import UserContext from "../Contexts/userContext";
 const schema = yup.object({
   email: yup.string().email().required("Please fill out this field."),
   password: yup
@@ -23,8 +22,6 @@ export default function LogIn() {
   const location = useLocation();
   const navigate = useNavigate();
   const { setUser } = useContext(UserContext);
-  // const notify = () =>
-  //   toast.success("You Are Logged Successfully", { delay: 1000 });
 
   const {
     register,
@@ -36,7 +33,6 @@ export default function LogIn() {
   });
 
   const onSubmit = async (body) => {
-    // //console.log({ body: JSON.stringify(body) });
     try {
       const { data: res } = await axios.post(
         "https://slice-of-sin-backend.onrender.com/v1/auth/sign-in",
@@ -45,20 +41,13 @@ export default function LogIn() {
       console.log({ res });
       if (res.success === true) {
         toast.success("Your are logged successfully");
-        // className: 'toast-message'
       }
-      //console.log({ user: res.data });
-      // console.log({ res });
+
       setUser(res.data);
       navigate("/");
     } catch (err) {
-      //handle different types of errors -> wrong password or unregisterd
-      //console.log("caught refe");
-      //console.log({ err });
       if (err.response.status === 404 || err.response.status === 401) {
-        // navigate("/register");
         toast.error("Invalid email or password!");
-        // location.reload();
       }
     }
   };
@@ -111,9 +100,7 @@ export default function LogIn() {
                     <p className="text-red-500 text-xs italic">
                       {errors.password?.message}
                     </p>
-                    <span className="text-xs">
-                      <Link to="/ForgetPasswordForm">Forget Password </Link>
-                    </span>
+                    
                     <label className="label">
                       <span className="text-sm">
                         Don't hava a account{" "}
