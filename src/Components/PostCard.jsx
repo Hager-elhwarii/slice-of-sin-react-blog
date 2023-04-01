@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import React, { useContext } from "react";
 
-import UserContext from "../Contexts/userContext";
+import UserContext from "../contexts/userContext";
 import DeleteIcon from "./DeleteIcon";
 import EditIcon from "./EditIcon";
 import RightArrow from "./RightArrow";
 
 export default function PostCard(props) {
   const { user } = useContext(UserContext);
-console.log(useContext(UserContext));
+  console.log(useContext(UserContext));
   const {
     id,
     authorThumbnail,

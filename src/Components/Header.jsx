@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import UserContext from "../Contexts/userContext";
+import UserContext from "../contexts/userContext";
 
 export default function Header() {
   const { user } = useContext(UserContext);
@@ -20,28 +20,17 @@ export default function Header() {
             tabIndex={0}
             className=" p-2 bg-white rounded-box w-52 lg:flex-grow hidden lg:flex"
           >
-            
-              <Link to="/" className="text-gray-600 ">
-              <li className="ml-6 ">
-                Home
-                </li>
-              </Link>
-          
-           
-              <Link to="/about" className="text-gray-600 ">
-              <li className="ml-10 ">
-                About Us
-                </li>
-              </Link>
+            <Link to="/" className="text-gray-600 ">
+              <li className="ml-6 ">Home</li>
+            </Link>
 
-          
-              <Link to="/cta" className="text-gray-600 ">
-              <li className="ml-10  ">
-                CTA
-                </li>
-              </Link>
-           
-          
+            <Link to="/about" className="text-gray-600 ">
+              <li className="ml-10 ">About Us</li>
+            </Link>
+
+            <Link to="/cta" className="text-gray-600 ">
+              <li className="ml-10  ">CTA</li>
+            </Link>
           </ul>
           <div className="dropdown block lg:hidden ">
             <div id="nav-toggle" className="block lg-hidden">
@@ -70,16 +59,16 @@ export default function Header() {
                 tabIndex={0}
                 className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52 lg:flex-grow"
               >
-                  <Link to="/" className="text-gray-600 focus:bg-teal-500">
+                <Link to="/" className="text-gray-600 focus:bg-teal-500">
                   <li className="ml-10 block mt-4 lg:inline-block lg:mt-0 ">
                     Home
-                    </li>
-                  </Link>
-                  <Link to="/about" className="text-gray-600 focus:bg-teal-500">
+                  </li>
+                </Link>
+                <Link to="/about" className="text-gray-600 focus:bg-teal-500">
                   <li className="ml-10 block mt-4 lg:inline-block lg:mt-0 ">
                     About Us
-                    </li>
-                  </Link>
+                  </li>
+                </Link>
               </ul>
             </div>
           </div>
@@ -111,13 +100,18 @@ export default function Header() {
                       />
                     </div>
                   </label>
-                  
+
                   <ul
                     tabIndex={0}
                     className="  navEnd p-2 shadow menu  dropdown-content bg-white rounded-box w-52  text-gray-600 "
                   >
-                    <li >
-                      <button className=" focus:bg-teal-500" onClick={handleLogout}>Logout</button>
+                    <li>
+                      <button
+                        className=" focus:bg-teal-500"
+                        onClick={handleLogout}
+                      >
+                        Logout
+                      </button>
                     </li>
                   </ul>
                 </div>

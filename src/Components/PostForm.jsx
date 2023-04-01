@@ -7,7 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate, useParams } from "react-router-dom";
 
-import UserContext from "../Contexts/userContext";
+import UserContext from "../contexts/userContext";
 
 const MAX_FILE_SIZE = 10485760;
 
@@ -177,18 +177,16 @@ export default function PostForm(props) {
                           type="file"
                           className="sr-only"
                         />
-                       
                       </label>
-                     
+
                       <p className="pl-1">or drag and drop</p>
                     </div>
                     <p className="text-red-600 text-sm mt-2 italic mx-auto">
-                          {errors.file?.message}
-                        </p>
+                      {errors.file?.message}
+                    </p>
                     <p className="text-xs text-gray-500">
                       PNG, JPG, GIF up to 10MB
                     </p>
-                   
                   </div>
                 </div>
               </div>

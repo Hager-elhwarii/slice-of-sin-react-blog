@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useContext } from "react";
-import UserContext from "../Contexts/userContext";
+import UserContext from "../contexts/userContext";
 const schema = yup.object({
   email: yup.string().email().required("Please fill out this field."),
   password: yup
@@ -100,7 +100,7 @@ export default function LogIn() {
                     <p className="text-red-500 text-xs italic">
                       {errors.password?.message}
                     </p>
-                    
+
                     <label className="label">
                       <span className="text-sm">
                         Don't hava a account{" "}

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useContext } from "react";
 import CreatePostBtn from "../Components/CreatePostBtn";
 import PostCard from "../Components/PostCard";
 import DownArrow from "../Components/DownArrow";
-import UserContext from "../Contexts/userContext";
+import UserContext from "../contexts/userContext";
 import GetStarted from "../Components/GetStarted";
 import ShopNow from "../Components/ShopNow";
 import Loader from "../Components/Loader";

@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
 import useUser from "./customHooks/useUser";
-import UserContext from "./Contexts/userContext";
+import UserContext from "./contexts/userContext";
 import Home from "./pages/Home.jsx";
 import Register from "./pages/Register.jsx";
 import LogIn from "./pages/LogIn.jsx";
