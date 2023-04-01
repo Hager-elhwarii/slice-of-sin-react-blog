@@ -41,7 +41,7 @@ export default function PostCard(props) {
 
   return (
     <>
-      <div className="min-w-100 shadow-xl mb-3 z-1 rounded-3xl ">
+      <div className="min-w-100 shadow-xl mb-3 z-1 rounded-3xl  ">
         <figure className="w-full h-80 overflow-hidden rounded-t-3xl  ">
           <Link to={`recipe/${id}`} id={id} className="text-center">
             <img
@@ -55,7 +55,13 @@ export default function PostCard(props) {
           <div className="flex my-2">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src={authorThumbnail} />
+                <img
+                  src={
+                    authorThumbnail??
+                      "https://digilander.libero.it/Ictszu/rev4.0/avatar.jpg"
+                  }
+                />
+  
               </div>
             </label>
             <div>
