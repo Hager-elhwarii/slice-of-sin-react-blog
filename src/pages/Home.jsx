@@ -72,8 +72,8 @@ export default function Home() {
         </div>
       </div>
       <div
-        // className="grid grid-cols-3 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-        className="container mx-auto flex flex-wrap justify-evenly gap-4"
+        className="grid grid-cols-3 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+        // className="container mx-auto flex flex-wrap justify-evenly gap-4"
         // style={{ marginLeft: `2rem` }}
       >
         {posts.map((post, index) => {
