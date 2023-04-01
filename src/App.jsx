@@ -19,8 +19,6 @@ import Cta from "./Components/Cta";
 function App() {
   const { user, setUser } = useUser();
 
- 
-
   return (
     <UserContext.Provider value={{ user, setUser }}>
       <ToastContainer autoClose={1500} />
