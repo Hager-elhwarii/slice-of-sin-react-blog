@@ -35,22 +35,22 @@ export default function Footer() {
               <p className="mt-4 text-sm text-center text-gray-400 lg:text-left lg:mt-0">
                <u className="flex no-underline	list-none">
                <li className="ml-10 ">
-              <Link to="/" className="text-gray-600">
+              <Link to="/" className="text-gray-400 bold hover:text-gray-600 ">
                 Home
               </Link>
             </li>
             <li className="ml-10 ">
-              <Link to="/about" className="text-gray-600">
+              <Link to="/about" className="text-gray-400">
                 About Us
               </Link>
             </li>
             <li className="ml-10 ">
-              <Link to="/Cta" className="text-gray-600">
+              <Link to="/Cta" className="text-gray-400">
                 CTA
               </Link>
             </li>
             <li className="ml-10 ">
-              <Link to="/login" className="text-gray-600">
+              <Link to="/login" className="text-gray-400">
                 Log in
               </Link>
             </li>

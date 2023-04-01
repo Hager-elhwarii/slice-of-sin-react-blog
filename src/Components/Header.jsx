@@ -17,13 +17,13 @@ export default function Header() {
   return (
     <>
       {/* <TextScrolling/> */}
-      <div className="navbar sticky top-0 z-50 drop-shadow bg-white">
+      <div className=" navbar sticky top-0 z-50 drop-shadow bg-white">
         <div className=" navbar-start ">
           <ul
             tabIndex={0}
-            className="mt-3 p-2 bg-white rounded-box w-52 lg:flex-grow hidden lg:flex"
+            className=" p-2 bg-white rounded-box w-52 lg:flex-grow hidden lg:flex"
           >
-            <li className="ml-10 ">
+            <li className="ml-5">
               <Link to="/" className="text-gray-600">
                 Home
               </Link>
@@ -120,22 +120,14 @@ export default function Header() {
                   >
                     <li>
                       <button onClick={handleLogout}>Logout</button>
-                      {/* <a>Logout</a> */}
                     </li>
-                   
-                    {/* <li>
-                      <Link to="/login" className="active:bg-teal-400">
-                        {" "}
-                        Login
-                      </Link>
-                    </li> */}
                   </ul>
                 </div>
               </div>
             ) : (
               <div className="flex gap-4">
                 <Link to="/login">
-                  <button className="text-gray-800 px-3 cursor-pointer  py-2  text-bold">
+                  <button className="text-gray-800 px-3 cursor-pointer  py-2  text-bold hidden md:block">
                     Sign in
                   </button>
                 </Link>
