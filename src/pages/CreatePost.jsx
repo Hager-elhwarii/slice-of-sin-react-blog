@@ -5,7 +5,7 @@ import UserContext from "../Contexts/userContext";
 export default function CreatePost() {
   return (
     <>
-      <PostForm pageTitle="Create new Post" />
+      <PostForm pageTitle="Create new post" />
     </>
   );
 }

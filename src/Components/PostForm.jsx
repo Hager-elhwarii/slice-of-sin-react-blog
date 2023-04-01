@@ -96,10 +96,10 @@ export default function PostForm(props) {
         <div className="container mx-auto m-auto">
           <div className="shadow sm:overflow-hidden sm:rounded-md">
             <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
-              <h1 className="text-center text-4xl">{pageTitle}</h1>
+              <h1 className="text-gray-500 text-4xl ">{pageTitle}</h1>
               <div>
                 <div>
-                  <label className="block text-sm font-medium leading-6 text-gray-900">
+                  <label className="block text-sm font-medium leading-6 text-gray-500">
                     Post Title
                   </label>
                   <div className="mt-2 flex flex-wrap rounded-md shadow-sm">
@@ -116,7 +116,7 @@ export default function PostForm(props) {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium leading-6 text-gray-900">
+                <label className="block text-sm font-medium leading-6 text-gray-500">
                   Description
                 </label>
                 <div className="mt-2">
@@ -132,7 +132,7 @@ export default function PostForm(props) {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium leading-6 text-gray-900">
+                <label className="block text-sm font-medium leading-6 text-gray-500">
                   Recipe
                 </label>
                 <div className="mt-2">
@@ -149,7 +149,7 @@ export default function PostForm(props) {
               </div>
 
               <div>
-                <label className="block text-sm font-medium leading-6 text-gray-900">
+                <label className="block text-sm font-medium leading-6 text-gray-500">
                   Cover photo
                 </label>
                 <div className="mt-2 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
@@ -177,15 +177,18 @@ export default function PostForm(props) {
                           type="file"
                           className="sr-only"
                         />
-                        <p className="text-red-500 text-xs mt-2 italic">
-                          {errors.file?.message}
-                        </p>
+                       
                       </label>
+                     
                       <p className="pl-1">or drag and drop</p>
                     </div>
+                    <p className="text-red-600 text-sm mt-2 italic mx-auto">
+                          {errors.file?.message}
+                        </p>
                     <p className="text-xs text-gray-500">
                       PNG, JPG, GIF up to 10MB
                     </p>
+                   
                   </div>
                 </div>
               </div>

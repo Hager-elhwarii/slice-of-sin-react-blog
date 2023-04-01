@@ -93,7 +93,7 @@ export default function Header() {
           <div className="dropdown dropdown-end ">
             {user ? (
               <div className="flex items-center">
-                <div className="mr-2 username text-center hidden md:block">
+                <div className="mr-2 username text-center hidden md:block text-gray-500">
                   <p>Hello {user?.userBody?.username}</p>
                 </div>
                 <div className="menu ">
