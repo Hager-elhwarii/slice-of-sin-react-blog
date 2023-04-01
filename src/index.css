@@ -5,9 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  padding-top: 25px;  
- } */
+
 :root {
   background-color: #fff;
 }
@@ -30,12 +28,7 @@
 .title {
   font-family: "Manjari", sans-serif;
 }
-/* .card {
-  width: 26rem;
-  height: 484px;
-} */
 
 .navEnd {
   margin-top: 3.65rem;
 }
-

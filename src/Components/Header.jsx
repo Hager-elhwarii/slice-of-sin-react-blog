@@ -18,23 +18,29 @@ export default function Header() {
         <div className=" navbar-start ">
           <ul
             tabIndex={0}
-            className="mt-3 p-2 bg-white rounded-box w-52 lg:flex-grow hidden lg:flex"
+            className=" p-2 bg-white rounded-box w-52 lg:flex-grow hidden lg:flex"
           >
-            <li className="ml-6">
-              <Link to="/" className="text-gray-600">
+            
+              <Link to="/" className="text-gray-600 ">
+              <li className="ml-6 ">
                 Home
+                </li>
               </Link>
-            </li>
-            <li className="ml-10 ">
-              <Link to="/about" className="text-gray-600">
+          
+           
+              <Link to="/about" className="text-gray-600 ">
+              <li className="ml-10 ">
                 About Us
+                </li>
               </Link>
-            </li>
-            <li className="ml-10 ">
-              <Link to="/cta" className="text-gray-600">
+
+          
+              <Link to="/cta" className="text-gray-600 ">
+              <li className="ml-10  ">
                 CTA
+                </li>
               </Link>
-            </li>
+           
           
           </ul>
           <div className="dropdown block lg:hidden ">
@@ -64,20 +70,16 @@ export default function Header() {
                 tabIndex={0}
                 className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52 lg:flex-grow"
               >
-                <li className="ml-10 block mt-4 lg:inline-block lg:mt-0 ">
-                  <Link to="/" className="text-gray-600">
+                  <Link to="/" className="text-gray-600 focus:bg-teal-500">
+                  <li className="ml-10 block mt-4 lg:inline-block lg:mt-0 ">
                     Home
+                    </li>
                   </Link>
-                </li>
-                <li className="ml-10 block mt-4 lg:inline-block lg:mt-0 ">
-                  <Link to="/about" className="text-gray-600">
+                  <Link to="/about" className="text-gray-600 focus:bg-teal-500">
+                  <li className="ml-10 block mt-4 lg:inline-block lg:mt-0 ">
                     About Us
+                    </li>
                   </Link>
-                </li>
-                <li className="ml-10 block mt-4 lg:inline-block lg:mt-0 ">
-                  <a>Plans</a>
-                </li>
-               
               </ul>
             </div>
           </div>
@@ -107,15 +109,14 @@ export default function Header() {
                             : user?.userBody?.avatar?.url
                         }
                       />
-
                     </div>
                   </label>
                   <ul
                     tabIndex={0}
-                    className="navEnd p-2 shadow menu menu-compact dropdown-content bg-white rounded-box w-52  text-gray-600"
+                    className="  navEnd p-2 shadow menu  dropdown-content bg-white rounded-box w-52  text-gray-600 "
                   >
-                    <li>
-                      <button onClick={handleLogout}>Logout</button>
+                    <li >
+                      <button className=" focus:bg-teal-500" onClick={handleLogout}>Logout</button>
                     </li>
                   </ul>
                 </div>
