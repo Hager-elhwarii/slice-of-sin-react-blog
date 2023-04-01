@@ -11,7 +11,7 @@ export default function useUser() {
     localStorage.setItem("user", JSON.stringify(user));
     setUser(user);
   };
-  // just reference function without calling
+
   const [user, setUser] = useState(getUser);
 
   //console.log({ user });
