@@ -36,7 +36,7 @@ export default function GetStarted() {
         <img
           src="https://i.ibb.co/94czYss/bg.gif"
           alt=""
-          className="h-[750px] mx-auto mb-12 -mt-20 rounded-lg shadow-md lg:-mt-40 dark:bg-gray-500"
+          className="w-5/6 mx-auto mb-12 -mt-20 rounded-lg shadow-md lg:-mt-40 dark:bg-gray-500"
         />
       </section>
     </>
