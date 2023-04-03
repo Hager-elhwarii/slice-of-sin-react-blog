@@ -41,7 +41,7 @@ export default function PostCard(props) {
 
   return (
     <>
-      <div className="min-w-100 shadow-xl mb-3 z-1 rounded-3xl  ">
+      <div className="min-w-100 shadow-xl mb-3 z-1 rounded-3xl h-full  ">
         <figure className="w-full h-80 overflow-hidden rounded-t-3xl  ">
           <Link to={`recipe/${id}`} id={id} className="text-center">
             <img
