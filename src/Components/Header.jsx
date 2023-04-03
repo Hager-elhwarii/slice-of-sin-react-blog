@@ -24,13 +24,16 @@ export default function Header() {
               <li className="ml-6 ">Home</li>
             </Link>
 
+
+            <Link to="/gallery" className="text-gray-600 ">
+              <li className="ml-10 ">Gallery</li>
+            </Link> 
+
             <Link to="/about" className="text-gray-600 ">
               <li className="ml-10 ">About Us</li>
             </Link>
 
-            <Link to="/cta" className="text-gray-600 ">
-              <li className="ml-10  ">CTA</li>
-            </Link>
+           
           </ul>
           <div className="dropdown block lg:hidden ">
             <div id="nav-toggle" className="block lg-hidden">
@@ -64,8 +67,11 @@ export default function Header() {
                     Home
                   </li>
                 </Link>
+                <Link to="/gallery" className="text-gray-600 ">
+              <li className="ml-10 ">Gallery</li>
+            </Link> 
                 <Link to="/about" className="text-gray-600 focus:bg-teal-500">
-                  <li className="ml-10 block mt-4 lg:inline-block lg:mt-0 ">
+                  <li className="ml-10 block lg:inline-block lg:mt-0 ">
                     About Us
                   </li>
                 </Link>

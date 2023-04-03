@@ -14,7 +14,7 @@ import CreatePost from "./pages/CreatePost";
 import FullPostCard from "./Components/FullPostCard";
 import UpdatePost from "./pages/UpdatPost";
 import ScrollToTop from "./Components/ScrollToTop";
-import Cta from "./Components/Cta";
+import Gallery from "./pages/Gallery";
 
 function App() {
   const { user, setUser } = useUser();
@@ -30,7 +30,7 @@ function App() {
         <Route path="/login" element={<LogIn />} />
         <Route path="/register" element={<Register />} />
         <Route element={<About />} path="/about" />
-        <Route element={<Cta />} path="/cta" />
+        <Route element={<Gallery />} path="/gallery" />
         <Route element={<CreatePost />} path="/recipe/create" />
         <Route element={<FullPostCard />} path="/recipe/:id" />
         <Route element={<UpdatePost />} path="/recipe/edit/:id" />
