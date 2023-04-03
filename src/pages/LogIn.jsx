@@ -54,82 +54,76 @@ export default function LogIn() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div
-          className="hero min-h-screen  logInPage  "
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://media.timeout.com/images/105898230/image.jpg")`,
-          }}
+     
+      <div
+        className="hero min-h-screen"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://media.timeout.com/images/105898230/image.jpg")`,
+        }}
+      >
+        <form
+          className="w-full max-w-lg  mb-24 card px-10 py-6	shadow-2xl  mt-20 bg-white  flex justify-start "
+          onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="hero-content flex-col lg:flex-row-reverse  mt-14">
-            <div className="card max-w-4xl shadow-2xl logInForm  bg-white z-50	">
-              <div>
-                <h1 className="text-center text-4xl pt-5  text-gray-600">
-                  Login
-                </h1>
+          <h1 className="text-center text-4xl pb-4 text-gray-600">Login</h1>
 
-                <div className="card-body">
-                  <div className="form-control flex flex-wrap">
-                    <label className="label">
-                      <span className="label-text text-lg text-gray-600">
-                        Email
-                      </span>
-                    </label>
-                    <input
-                      {...register("email")}
-                      type="text"
-                      placeholder="Example@gmail.com"
-                      className="appearance-none block w-full bg-white text-gray-700 border border-gray-300  rounded py-3 px-4 mb-1  leading-tight focus:outline-none focus:border-gray-500"
-                    />
-                    <p className="text-red-500 text-xs italic">
-                      {errors.email?.message}
-                    </p>
-                  </div>
-                  <div className="form-control flex flex-wrap">
-                    <label className="label">
-                      <span className="label-text text-lg text-gray-600">
-                        Password
-                      </span>
-                    </label>
-                    <input
-                      {...register("password")}
-                      type="password"
-                      placeholder="************"
-                      className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-gray-500 "
-                    />
-                    <p className="text-red-500 text-xs italic">
-                      {errors.password?.message}
-                    </p>
+          <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="w-full px-3 mb-6 md:mb-0">
+              <label className="block  tracking-wide text-lg  mb-1 text-gray-600">
+                Email
+              </label>
 
-                    <label className="label">
-                      <span className="text-sm">
-                        Don't hava a account{" "}
-                        <Link
-                          to="/register"
-                          className="underline underline-offset-4 text-blue-500 hover:text-blue-400 "
-                        >
-                          {" "}
-                          Register
-                        </Link>
-                      </span>
-                    </label>
-                  </div>
-                  <div className="form-control mt-6 flex flex-wrap">
-                    <button
-                      // onClick={notify}
-                      className="disabled:opacity-60 inline-flex justify-center rounded-md bg-teal-600  px-3 text-lg font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 py-3"
-                      disabled={isSubmitting}
-                      type="submit"
-                    >
-                      {isSubmitting ? "logging..." : "Log in    "}
-                    </button>
-                  </div>
-                </div>
-              </div>
+              <input
+                {...register("email")}
+                className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-1 leading-tight focus:outline-none focus:border-gray-500"
+                id="grid-first-name"
+                type="email"
+                placeholder="Example@gmail.com"
+              />
+              <p className="text-red-500 text-xs italic">
+                {errors.email?.message}
+              </p>
             </div>
           </div>
-        </div>
-      </form>
+
+          <div className="flex flex-wrap -mx-3 mb-2">
+            <div className="w-full px-3">
+              <label className="block tracking-wide text-lg mb-1 text-gray-600">
+                Password
+              </label>
+              <input
+                {...register("password")}
+                className="appearance-none block w-full bg-white  text-gray-700 border border-gray-300 rounded py-3 px-4 mb-1 leading-tight focus:outline-none focus:border-gray-500"
+                id="grid-password"
+                type="password"
+                placeholder="******************"
+              />
+              <p className="text-red-500 text-xs italic">
+                {errors.password?.message}
+              </p>
+              <label className="label">
+                <span className="text-sm">
+                  Don't hava a account{" "}
+                  <Link
+                    to="/register"
+                    className="underline underline-offset-4 text-blue-500 hover:text-blue-400 "
+                  >
+                    {" "}
+                    Register
+                  </Link>
+                </span>
+              </label>
+            </div>
+          </div>
+          <button
+            disabled={isSubmitting}
+            className="disabled:opacity-60  capitalize w-full rounded-md bg-teal-600  px-3 text-lg font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 py-3 mt-6 "
+            type="submit"
+          >
+            {isSubmitting ? "logging..." : "Log in"}
+          </button>
+        </form>
+      </div>
     </>
   );
 }

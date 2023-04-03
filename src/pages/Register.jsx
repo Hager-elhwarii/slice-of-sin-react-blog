@@ -27,7 +27,7 @@ export default function Register() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors , isSubmitting},
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = async (body) => {
@@ -145,10 +145,11 @@ export default function Register() {
           </div>
 
           <button
-            className="btn btn-accent text-xl capitalize w-full"
+            disabled={isSubmitting}
+            className="disabled:opacity-60  capitalize w-full rounded-md bg-teal-600  px-3 text-lg font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 py-3 mt-6"
             type="submit"
           >
-            Sign up
+            {isSubmitting ? "Signing..." : "Sign in"}
           </button>
         </form>
       </div>
