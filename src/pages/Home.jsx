@@ -49,14 +49,14 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <h1 className="text-center mt-20 capitalize text-gray-500 text-6xl title">
+        <h1 className="text-center mt-20 capitalize text-gray-500 text-3xl sm:text-5xl  xl:text-6xl title">
           {" "}
           simple recipes made for
         </h1>
-        <h1 className="text-center mt-10 capitalize text-5xl  homeTitle mb-40">
+        <h1 className="text-center md:mt-10 capitalize text-2xl sm:text-4xl  xl:text-5xl homeTitle mb-40">
           real, actual, everyday life.
         </h1>
-        <div className="flex flex-col items-center createBtn mb-14 ">
+        <div className="flex flex-col items-center  createBtn mb-14 ">
           <DownArrow />
         </div>
       </div>

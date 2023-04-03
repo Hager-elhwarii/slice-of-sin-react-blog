@@ -74,7 +74,7 @@ export default function Header() {
           </div>
         </div>
         <div className="navbar-center">
-          <a className=" normal-case text-5xl Logo text-gray-500">
+          <a className=" normal-case text-2xl sm:text-4xl   xl:text-5xl Logo text-gray-500">
             Slice of Sin
           </a>
         </div>
@@ -85,12 +85,12 @@ export default function Header() {
                 <div className="mr-2 username text-center hidden md:block text-gray-500">
                   <p>Hello {user?.userBody?.username}</p>
                 </div>
-                <div className="menu ">
+                <div className="menu">
                   <label
                     tabIndex={0}
                     className="btn btn-ghost btn-circle avatar "
                   >
-                    <div className="w-10 rounded-full">
+                    <div className="w-10 rounded-full ">
                       <img
                         src={
                           user?.userBody?.avatar?.url === ""
