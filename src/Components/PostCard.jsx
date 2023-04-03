@@ -61,7 +61,6 @@ export default function PostCard(props) {
                       "https://digilander.libero.it/Ictszu/rev4.0/avatar.jpg"
                   }
                 />
-  
               </div>
             </label>
             <div>
