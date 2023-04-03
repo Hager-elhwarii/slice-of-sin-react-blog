@@ -177,16 +177,18 @@ export default function PostForm(props) {
                           type="file"
                           className="sr-only"
                         />
+                       
                       </label>
-
+                     
                       <p className="pl-1">or drag and drop</p>
                     </div>
                     <p className="text-red-600 text-sm mt-2 italic mx-auto">
-                      {errors.file?.message}
-                    </p>
+                          {errors.file?.message}
+                        </p>
                     <p className="text-xs text-gray-500">
                       PNG, JPG, GIF up to 10MB
                     </p>
+                   
                   </div>
                 </div>
               </div>

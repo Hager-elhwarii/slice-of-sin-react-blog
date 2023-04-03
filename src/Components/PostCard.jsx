@@ -57,8 +57,8 @@ export default function PostCard(props) {
               <div className="w-10 rounded-full">
                 <img
                   src={
-                    authorThumbnail??
-                      "https://digilander.libero.it/Ictszu/rev4.0/avatar.jpg"
+                    authorThumbnail? authorThumbnail
+                      : "https://digilander.libero.it/Ictszu/rev4.0/avatar.jpg"
                   }
                 />
               </div>

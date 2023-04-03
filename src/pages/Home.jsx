@@ -71,7 +71,7 @@ export default function Home() {
               key={post._id}
               id={post._id}
               title={post.title}
-              authorThumbnail={post.author?.avatar.url}
+              authorThumbnail={post?.author?.avatar?.url}
               authorId={post.author?._id}
               authorName={post.author.username}
               background={post.image.url}
