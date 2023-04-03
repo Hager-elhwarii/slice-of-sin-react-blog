@@ -5,7 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   background-color: #fff;
 }
@@ -31,4 +30,7 @@
 
 .navEnd {
   margin-top: 3.65rem;
+}
+.notify {
+  margin-top: 3.5rem;
 }

@@ -21,7 +21,7 @@ function App() {
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
-      <ToastContainer autoClose={1500} />
+      <ToastContainer autoClose={1500} className="notify" />
       <Header />
       <ScrollToTop />
 
