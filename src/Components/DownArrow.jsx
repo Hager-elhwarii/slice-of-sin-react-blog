@@ -1,6 +1,7 @@
 export default function DownArrow() {
   return (
     <>
+    <a href="#GetStarted">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -13,6 +14,7 @@ export default function DownArrow() {
           clipRule="evenodd"
         />
       </svg>
+      </a>
     </>
   );
 }

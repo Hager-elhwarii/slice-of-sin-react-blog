@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 export default function GetStarted() {
   return (
     <>
-      <section className="mt-10">
+      <section className="mt-10" id="GetStarted">
         <div className="dark:bg-violet-400">
           <div className="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 dark:text-gray-900">
             <h1 className="text-3xl font-bold leading-none md:text-6xl xl:max-w-3xl dark:text-gray-900">
