@@ -22,7 +22,7 @@ export default function FullPostCard() {
   if (!post) return <Loader />;
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row w-full bg-white  rounded mt-20  shadow-xl  mb-32">
+    <div className="flex flex-col-reverse lg:flex-row w-full bg-white  rounded mt-20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] 0px mb-32">
       <div className="w-full lg:w-1/2">
         <div
           aria-label="card"
