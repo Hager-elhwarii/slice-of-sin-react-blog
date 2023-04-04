@@ -40,16 +40,15 @@ export default function Footer() {
                 Home
               </Link>
             </li>
+            <Link to="/gallery" className="text-gray-400 ">
+              <li className="ml-10 ">Gallery</li>
+            </Link> 
             <li className="ml-10 ">
               <Link to="/about" className="text-gray-400">
                 About Us
               </Link>
             </li>
-            <li className="ml-10 ">
-              <Link to="/Cta" className="text-gray-400">
-                CTA
-              </Link>
-            </li>
+           
             <li className="ml-10 ">
               <Link to="/login" className="text-gray-400">
                 Log in

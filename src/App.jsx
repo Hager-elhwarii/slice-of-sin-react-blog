@@ -24,7 +24,6 @@ function App() {
       <ToastContainer autoClose={1500} className="notify" />
       <Header />
       <ScrollToTop />
-
       <Routes>
         {/* revisit */}
         <Route path="/login" element={<LogIn />} />

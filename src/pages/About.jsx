@@ -24,18 +24,31 @@ export default function About() {
                 <p className="mt-4 text-gray-600 text-xl">
                   Slice Of Sin is the trusted destination for bakers of all
                   levels to learn, be inspired, and share their enthusiasm for
-                  baking with those they love. to the best recipes, content, tips
-                  and tools, we bring baking to life in everything we do, so you
-                  can do the same in your own home, We want to create, educate
-                  and inspire you to become the best baker you can be, so we
-                  never show you a cake without helping you make it, reveal a
-                  product without a recipe, or recommend anything that doesn’t
-                  make you and your baking better, Our recipes are scrumptious,
-                  and like all good things in life are best enjoyed as part of a
-                  balanced lifestyle. With that in mind, we create alternative
-                  recipe options to suit your needs including reduced sugar,
-                  no-nuts, gluten-free and many more.
+                  baking with those they love. to the best recipes, content,
+                  tips and tools, we bring baking to life in everything we do,
+                  so you can do the same in your own home, We want to create,
+                  educate and inspire you to become the best baker you can be,
+                  so we never show you a cake without helping you make it,
+                  reveal a product without a recipe, or recommend anything that
+                  doesn’t make you and your baking better, Our recipes are
+                  scrumptious, and like all good things in life are best enjoyed
+                  as part of a balanced lifestyle. With that in mind, we create
+                  alternative recipe options to suit your needs including
+                  reduced sugar, no-nuts, gluten-free and many more.
                 </p>
+                <div className="flex my-2 mt-14">
+                  <label
+                    tabIndex={0}
+                    className="btn btn-ghost btn-circle avatar"
+                  >
+                    <div className="w-10 rounded-full">
+                      <img src="https://i.ibb.co/PwxS9HK/4385ef2a-6856-47c4-aba9-4abe0f372913.jpg" />
+                    </div>
+                  </label>
+                  <div>
+                    <p className="ml-2 mt-2 text-gray-500">Hager Elhwarii | FrontEnd Developer</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
