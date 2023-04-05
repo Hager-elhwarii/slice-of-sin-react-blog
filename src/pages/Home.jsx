@@ -8,14 +8,12 @@ import GetStarted from "../Components/GetStarted";
 import ShopNow from "../Components/ShopNow";
 import Loader from "../Components/Loader";
 import axios from "axios";
-import { useLocation, useNavigationType } from "react-router-dom";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
   const { user } = useContext(UserContext);
   const API = "https://slice-of-sin-backend.onrender.com/v1/post";
 
-  console.log({ posts });
   const fetchPosts = async () => {
     const { data: res } = await axios.get(API);
     setPosts(res.data);

@@ -8,7 +8,6 @@ import RightArrow from "./RightArrow";
 
 export default function PostCard(props) {
   const { user } = useContext(UserContext);
-  console.log(useContext(UserContext));
   const {
     id,
     authorThumbnail,
@@ -22,10 +21,9 @@ export default function PostCard(props) {
   } = props;
 
   const renderAuthorControl = () => {
-    //console.log("in author control");
+    
     if (user?.userBody._id === authorId) {
-      //console.log({ user: user?.userBody._id, authorId });
-      //console.log("in render ");
+     
       return (
         <div className="card-actions justify-end mt-9 ">
           <Link to={`/recipe/edit/${id}`} className="active:bg-teal-400 ">

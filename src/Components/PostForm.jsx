@@ -53,7 +53,6 @@ export default function PostForm(props) {
 
   const onSubmit = async (data) => {
     const formData = new FormData();
-    //console.log({ data });
     formData.append("file", data.file[0]);
     formData.append("title", data.title);
     formData.append("description", data.description);
@@ -82,9 +81,7 @@ export default function PostForm(props) {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      console.log({ res });
       if (res.status === 200) {
-        console.log("in toast");
         toast.success("Your post is created successfully!");
       }
     }
