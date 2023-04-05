@@ -8,6 +8,7 @@ import GetStarted from "../Components/GetStarted";
 import ShopNow from "../Components/ShopNow";
 import Loader from "../Components/Loader";
 import axios from "axios";
+import { useLocation, useNavigationType } from "react-router-dom";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -19,6 +20,10 @@ export default function Home() {
     const { data: res } = await axios.get(API);
     setPosts(res.data);
   };
+
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, 0);
 
   useEffect(() => {
     fetchPosts();

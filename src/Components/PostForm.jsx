@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -31,8 +31,10 @@ const schema = yup.object().shape({
     .required()
     .test("length", "Please choose an image.", (value) => value.length === 1),
 });
+
 export default function PostForm(props) {
   const { user } = useContext(UserContext);
+  const [previewImage, setPreviewImage] = useState(null);
   const notify = () => toast.success("Post is Created Scuccessfully");
   const { access_token: token } = user;
   const navigate = useNavigate();
@@ -172,24 +174,40 @@ export default function PostForm(props) {
                       <label className="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500">
                         <span>Upload a file</span>
                         <input
-                         accept="image/*" multiple
+                          accept="image/*"
+                          multiple
                           {...register("file")}
                           id="file-upload"
                           type="file"
                           className="sr-only"
+                          onChange={(e) => {
+                            setPreviewImage(e.target.files[0]);
+                          }}
                         />
-                       
                       </label>
-                     
+                        
                       <p className="pl-1">or drag and drop</p>
+                      
                     </div>
                     <p className="text-red-600 text-sm mt-2 italic mx-auto">
-                          {errors.file?.message}
-                        </p>
+                      {errors.file?.message}
+                    </p>
+                    <div className="flex flex-col">
+                         <div>
                     <p className="text-xs text-gray-500">
                       PNG, JPG, GIF up to 10MB
                     </p>
-                   
+                    </div>
+                    <div>
+                    {previewImage && (
+                        <img
+                          className="w-full h-full mx-auto mt-2 object-cover"
+                          src={URL.createObjectURL(previewImage)}
+                          alt="Preview"
+                        />
+                      )}
+                      </div>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -206,7 +224,6 @@ export default function PostForm(props) {
           </div>
         </div>
       </form>
-      
     </>
   );
 }
