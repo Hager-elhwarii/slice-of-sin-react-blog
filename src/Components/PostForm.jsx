@@ -101,7 +101,7 @@ export default function PostForm(props) {
               <h1 className="text-gray-500 text-4xl ">{pageTitle}</h1>
               <div>
                 <div>
-                  <label className="block text-sm font-medium leading-6 text-gray-500">
+                  <label className="block text-xl font-medium leading-6 text-gray-500">
                     Post Title
                   </label>
                   <div className="mt-2 flex flex-wrap rounded-md shadow-sm">
@@ -111,14 +111,14 @@ export default function PostForm(props) {
                       placeholder="  Type your title here..."
                       className="input input-bordered w-full bg-white text-sm"
                     />
-                    <p className="text-red-500 text-xs mt-2 italic">
+                    <p className="text-red-500 text-sm mt-2 italic">
                       {errors.title?.message}
                     </p>
                   </div>
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium leading-6 text-gray-500">
+                <label className="block text-xl font-medium leading-6 text-gray-500">
                   Description
                 </label>
                 <div className="mt-2">
@@ -128,13 +128,13 @@ export default function PostForm(props) {
                     placeholder="Type your description here..."
                     className="textarea textarea-bordered textarea-lg  bg-white text-sm w-full"
                   ></textarea>
-                  <p className="text-red-500 text-xs italic">
+                  <p className="text-red-500 text-sm italic">
                     {errors.description?.message}
                   </p>
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium leading-6 text-gray-500">
+                <label className="block text-xl font-medium leading-6 text-gray-500">
                   Recipe
                 </label>
                 <div className="mt-2">
@@ -144,14 +144,14 @@ export default function PostForm(props) {
                     placeholder="Type your body description here..."
                     className="textarea textarea-bordered textarea-lg  bg-white text-sm w-full"
                   ></textarea>
-                  <p className="text-red-500 text-xs italic">
+                  <p className="text-red-500 text-sm italic">
                     {errors.recipe?.message}
                   </p>
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium leading-6 text-gray-500">
+                <label className="block text-xl font-medium leading-6 text-gray-500">
                   Cover photo
                 </label>
                 <div className="mt-2 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
@@ -194,14 +194,14 @@ export default function PostForm(props) {
                     </p>
                     <div className="flex flex-col">
                          <div>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-sm text-gray-500">
                       PNG, JPG, GIF up to 10MB
                     </p>
                     </div>
-                    <div>
+                    <div >
                     {previewImage && (
                         <img
-                          className="w-full h-full mx-auto mt-2 object-cover"
+                          className="w-full h-[150px] mx-auto mt-2 object-cover"
                           src={URL.createObjectURL(previewImage)}
                           alt="Preview"
                         />
