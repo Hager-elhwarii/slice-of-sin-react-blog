@@ -73,7 +73,6 @@ export default function PostForm(props) {
       }
     } else {
       formData.append("user", user.userBody._id);
-      console.log({ title: data.title });
       const res = await axios.post(
         "https://slice-of-sin-backend.onrender.com/v1/post",
         formData,

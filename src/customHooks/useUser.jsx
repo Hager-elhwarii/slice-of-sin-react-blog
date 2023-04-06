@@ -14,7 +14,6 @@ export default function useUser() {
 
   const [user, setUser] = useState(getUser);
 
-  //console.log({ user });
   return {
     user,
     setUser: saveUser,

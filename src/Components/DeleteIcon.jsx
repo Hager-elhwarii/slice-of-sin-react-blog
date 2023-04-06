@@ -1,8 +1,6 @@
 import axios from "axios";
 
 export default function DeleteIcon({ id, handleDeleteRender }) {
-  console.log("in delete icon");
-  console.log({ id });
   const handleDelete = async () => {
     const { data } = await axios.delete(
       `https://slice-of-sin-backend.onrender.com/v1/post`,

@@ -7,7 +7,6 @@ export default function FullPostCard() {
   const [post, setPost] = useState(null);
 
   const { id } = useParams();
-  console.log({ post });
   useEffect(() => {
     fetchPost();
   }, []);

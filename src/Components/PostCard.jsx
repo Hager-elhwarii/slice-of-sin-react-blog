@@ -77,8 +77,7 @@ export default function PostCard(props) {
             <Link to={`recipe/${id}`} id={id} className="text-center">
               <button className="mb-3 mt-6 flex justify-start text-center  hover:text-white  text-gray-500 dark:text-gray-500  cursor-pointer order-solid border-2 border-gray-400 w-40 rounded-sm py-2 hover:bg-black hover:border-black ease-in duration-300 ">
                 <div className="flex m-auto">
-                  <div>Read More</div>
-
+                  <div>Read More</div>                  
                   <div>
                     {" "}
                     <RightArrow />{" "}

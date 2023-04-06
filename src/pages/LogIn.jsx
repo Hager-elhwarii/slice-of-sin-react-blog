@@ -38,7 +38,6 @@ export default function LogIn() {
         "https://slice-of-sin-backend.onrender.com/v1/auth/sign-in",
         body
       );
-      console.log({ res });
       if (res.success === true) {
         toast.success("Your are logged successfully");
       }
